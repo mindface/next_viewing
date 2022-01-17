@@ -1,0 +1,78 @@
+@use '../settings' as *
+@use '../mixin' as mx
+
+.card
+  position: relative
+  max-width: calc(100% - 16px)
+  width: 100%
+  margin: 0 8px 8px
+  padding: 16px
+  background-color: $white_color
+  box-shadow: $boxShadow
+  &--20
+   max-width: calc(20% - 16px)
+  &--30
+   max-width: calc(33.333% - 16px)
+  &--40
+   max-width: calc(40% - 16px)
+  &--50
+   max-width: calc(50% - 16px)
+  &--60
+   max-width: calc(60% - 16px)
+  &--80
+   max-width: calc(80% - 16px)
+  .title
+    padding: 0 0 8px
+    font-weight: bold
+  .item
+    margin: 0 0 16px
+    cursor: pointer
+    transition: box-shadow 0.2s
+    .caption
+      position: relative
+      display: block
+      padding: 0 0 8px
+      padding-bottom: 0.25em
+      font-size: 1.2rem
+      font-weight: bold
+      word-wrap: break-word
+      background: linear-gradient($sub_dense_color,$sub_dense_color) 0 100%/0 2px no-repeat
+      transition: background 0.3s
+      &:hover
+        background-size: 100% 2px
+
+.card-box
+  .info-box
+    display: none
+
+.card-style-02
+  max-width: 1140px
+  min-width: 800px
+  margin: 0 auto 0 240px
+  overflow-x: scroll
+  .card
+   max-width: calc(50% - 16px)
+   &--user
+     position: absolute
+     top: 16px
+     left: 16px
+     min-height: calc(100vh - 116px)
+     width: 200px
+
+.card-style-03
+  max-width: calc(100% - 200px)
+  overflow-x: scroll
+  .card-box
+    width: 100vw
+  .info-box
+    position: fixed
+    top: 40px
+    right: 0
+    height: calc(100% - 40px)
+    width: 200px
+    padding: 16px
+    background-color: $white_color
+    box-shadow: $boxShadow
+    &--info
+      display: block
+

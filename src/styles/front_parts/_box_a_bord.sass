@@ -1,0 +1,81 @@
+@use '../settings' as *
+
+.box
+  &-task
+    &__title
+      margin: 0 0 8px
+      border-bottom: 1px solid $sub_dense_color
+      font-size: 1.4rem
+    &__body
+      max-height: 320px
+      overflow-y: scroll
+
+.bord
+  &--plan
+    .caption
+      flex: 1
+    .times
+      .aid
+        display: inline-block
+        padding: 0 4px
+  &--objective
+    .list
+      padding: 16px 0 8px
+      margin: 0 -8px
+    .item
+      position: relative
+      display: inline-block
+      max-width: 120px
+      width: 100%
+      margin: 0 8px
+      border: 2px solid $sub_dense_color
+      .caption
+        max-height: 44px
+        min-height: 2rem
+        padding: 4px
+        line-height: 1.6
+        overflow: hidden
+        text-overflow: ellipsis
+      .number
+        position: absolute
+        right: 0
+        bottom: 100%
+        font-size: 1.6rem
+
+  &--task-number
+    .number-box
+      position: relative
+      margin: 0 9px 0 0
+      padding: 8px
+      width: calc(20% - 8px)
+      border: 2px solid $sub_dense_color
+      &--task-objective
+        border-color: #033000
+        .number
+          color: #033000
+      &--task-limit
+        border-color: #0c5008
+        .number
+          color: #0c5008
+      &--task-premise
+        border-color: #116e0b
+        .number
+          color: #116e0b
+      &--task-structural-pat
+        border-color: #2b8f25
+        .number
+          color: #2b8f25
+      &:last-child
+        margin: 0
+      .caption
+        padding: 0 0 8px
+        font-size: 1.4rem
+        font-weight: bold
+      .number
+        position: absolute
+        right: 8px
+        bottom: 8px
+        display: inline-block
+        font-size: 1.4rem
+        font-weight: bold
+        

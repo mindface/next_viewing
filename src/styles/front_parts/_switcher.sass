@@ -1,0 +1,17 @@
+@use '../settings' as *
+@use '../mixin' as mx
+
+.switcher
+  padding: 0 16px 16px
+  input
+    display: none
+    &:checked
+      + .label
+        background-color: $sub_dense_color
+        color: $white_color
+        font-weight: bold
+  .label
+    display: inline-block
+    padding: 8px
+    border-radius: 8px
+    cursor: pointer
