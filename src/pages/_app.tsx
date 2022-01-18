@@ -9,16 +9,14 @@ import IndexLayout from '../layout/IndexLayout'
 import '../styles/style.sass'
 
 class BaseApp extends App {
-
   render(): JSX.Element {
-  
     const { Component, pageProps }: AppProps = this.props
-    return (   
+    return (
       <Provider store={Store()}>
         <IndexLayout>
-        <div className="content" suppressHydrationWarning>
-        {typeof window === 'undefined' ? null :<Component {...pageProps} />}
-        </div>
+          <div className='content' suppressHydrationWarning>
+            {typeof window === 'undefined' ? null : <Component {...pageProps} />}
+          </div>
         </IndexLayout>
       </Provider>
     )

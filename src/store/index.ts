@@ -8,7 +8,9 @@ import baseTaskSlice, { initialState as baseTaskState } from './baseTask/slice'
 import taskObjectiveSlice, { initialState as taskObjectiveState } from './taskObjective/slice'
 import taskPremiseSlice, { initialState as taskPremiseState } from './taskPremise/slice'
 import taskLimitSlice, { initialState as taskLimitState } from './taskLimit/slice'
-import structuralPatternSlice, { initialState as structuralPatternState } from './structuralPattern/slice'
+import structuralPatternSlice, {
+  initialState as structuralPatternState,
+} from './structuralPattern/slice'
 
 const rootReducer = combineReducers({
   logtools: logtoolsSlice.reducer,
@@ -28,22 +30,22 @@ const preloadedState = () => {
     taskObjective: taskObjectiveState,
     taskPremise: taskPremiseState,
     taskLimit: taskLimitState,
-    structuralPat: structuralPatternState
+    structuralPat: structuralPatternState,
   }
 }
 
-export type StoreState = ReturnType<typeof preloadedState>;
+export type StoreState = ReturnType<typeof preloadedState>
 
 export type ReuxStore = Store<StoreState>
 
 const Store = () => {
-  const middlewareList = [...getDefaultMiddleware(), logger];
+  const middlewareList = [...getDefaultMiddleware(), logger]
 
   return configureStore({
     reducer: rootReducer,
     middleware: middlewareList,
     devTools: process.env.NODE_ENV !== 'production',
-    preloadedState: preloadedState()
+    preloadedState: preloadedState(),
   })
 }
 

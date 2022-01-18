@@ -32,7 +32,7 @@ function BordTask() {
   const [viewSwitch, setViewSwitch] = useState(false)
   const [viewType, setViewType] = useState('new')
 
-  const quillRef = useRef('')
+  const editorRef = useRef(null)
 
   const saveToFile = (file: File) => {
     const form_data = new FormData()
@@ -45,14 +45,10 @@ function BordTask() {
     xhr.open('POST', 'http://localhost:8008/logtool/make_image', true)
     xhr.onload = function (e) {
       if (xhr.readyState === 4 && xhr.status === 200) {
-        // const data = JSON.parse(this.response)
-        // const range = editorRef.current?.getEditor()
-        // range.insertEmbed(range.index,"image",`http://localhost:8008/${data.file_name}`)
-        document.execCommand(
-          'insertHTML',
-          false,
-          '<img alt="画像文字列" src=`http://localhost:8008/${data.file_name}` />',
-        )
+        const data = JSON.parse(this.response)
+        const range = editorRef.current?.getEditor()
+        range.insertEmbed(range.index, 'image', `http://localhost:8008/${data.file_name}`)
+        // insertToEditor(data.data.imager_url)
       }
     }
     xhr.onerror = function (e) {
@@ -67,6 +63,7 @@ function BordTask() {
     const input = document.createElement('input') as HTMLInputElement
     input.setAttribute('type', 'file')
     input.setAttribute('accept', 'iamge/*')
+    ll()
     input.click()
 
     input.onchange = () => {
@@ -100,29 +97,6 @@ function BordTask() {
     },
   }
 
-  const formats = [
-    'font',
-    'size',
-    'bold',
-    'italic',
-    'underline',
-    'strike',
-    'color',
-    'background',
-    'script',
-    'header',
-    'blockquote',
-    'code-block',
-    'indent',
-    'list',
-    'direction',
-    'align',
-    'link',
-    'image',
-    'video',
-    'formula',
-  ]
-
   useEffect(() => {
     dispatch(getFetchBaseTasks())
   }, [])
@@ -130,7 +104,7 @@ function BordTask() {
   const createData = () => {
     const sendData = {
       title: title,
-      disc_content: quillRef.current,
+      disc_content: disc,
       user_name: username,
       play_item: Number(playItem),
       clear_item: Number(clearItem),
@@ -143,7 +117,7 @@ function BordTask() {
     const sendData = {
       id: viewId,
       title: title,
-      disc_content: quillRef.current,
+      disc_content: disc,
       user_name: username,
       play_item: Number(playItem),
       clear_item: Number(clearItem),
@@ -168,8 +142,6 @@ function BordTask() {
     setPlayItem(item.play_item)
     setClearItem(item.clear_item)
     setViewId(Number(item.id))
-    const editor = document.querySelector('#react-quill [contenteditable="true"]')
-    console.log(editor)
   }
 
   const resetData = () => {
@@ -181,9 +153,16 @@ function BordTask() {
     setClearItem(0)
   }
 
-  const removeHtmlText = (data: string): string => {
-    const text = data.replace(/<("[^"]*"|'[^']*'|[^'">])*>/g, '')
-    return text.substr(0, 180)
+  const ll = () => {
+    document.onselectionchange = () => {
+      const range = window.getSelection()?.getRangeAt(0)
+      console.log(editorRef)
+      //   const anchor = document.createElement('span')
+      //   anchor.innerHTML = '()'
+      //   range?.insertNode(anchor)
+      //   const pos = anchor.getBoundingClientRect()
+      //   console.log(pos)
+    }
   }
 
   return (
@@ -221,15 +200,26 @@ function BordTask() {
                 詳細
               </label>
               <ReactQuill
-                id='react-quill'
-                modules={modules}
-                formats={formats}
-                theme='snow'
-                defaultValue={disc}
-                onChange={(value: string) => {
-                  quillRef.current = value
+                ref={(e) => {
+                  editorRef.current = e
                 }}
+                onChangeSelection={(e, d, s) => {
+                  ll()
+                  console.log(s.getSelection())
+                }}
+                modules={modules}
+                theme='snow'
+                value={disc}
               />
+              <textarea
+                name='disc'
+                id='disc'
+                className='textarea'
+                defaultValue={disc}
+                onChange={(e) => {
+                  setDisc(e.target.value)
+                }}
+              ></textarea>
             </div>
             <div className='task-from__field'>
               <label htmlFor='username' className='label'>
@@ -295,7 +285,7 @@ function BordTask() {
             return (
               <li className='item' key={index} onClick={(e) => viewItem(item)}>
                 <p className='caption'>{item.title}</p>
-                <p className='disc'>{removeHtmlText(item.disc_content)}</p>
+                <p className='disc'>{item.disc_content}</p>
               </li>
             )
           })}

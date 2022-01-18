@@ -14,6 +14,8 @@ const ReactQuill = dynamic(import('react-quill'), {
   ssr: false,
   loading: () => <p>Loading ...</p>,
 })
+
+import Quill from 'Quill'
 import 'react-quill/dist/quill.snow.css'
 
 function BordTask() {
@@ -29,10 +31,9 @@ function BordTask() {
   const [viewId, setViewId] = useState(0)
   const modalRef = useRef({} as Handler)
 
-  const [viewSwitch, setViewSwitch] = useState(false)
   const [viewType, setViewType] = useState('new')
 
-  const quillRef = useRef('')
+  const editorRef = useRef(null)
 
   const saveToFile = (file: File) => {
     const form_data = new FormData()
@@ -45,14 +46,19 @@ function BordTask() {
     xhr.open('POST', 'http://localhost:8008/logtool/make_image', true)
     xhr.onload = function (e) {
       if (xhr.readyState === 4 && xhr.status === 200) {
-        // const data = JSON.parse(this.response)
+        const data = JSON.parse(this.response)
+        console.log(editorRef.current)
+        if (editorRef.current) {
+          const range = editorRef.current?.getSelection()
+          editorRef.current.insertEmbed(
+            range.index,
+            'image',
+            `http://localhost:8008/${data.file_name}`,
+          )
+        }
         // const range = editorRef.current?.getEditor()
         // range.insertEmbed(range.index,"image",`http://localhost:8008/${data.file_name}`)
-        document.execCommand(
-          'insertHTML',
-          false,
-          '<img alt="画像文字列" src=`http://localhost:8008/${data.file_name}` />',
-        )
+        // insertToEditor(data.data.imager_url)
       }
     }
     xhr.onerror = function (e) {
@@ -63,65 +69,75 @@ function BordTask() {
     return false
   }
 
-  const imager = () => {
-    const input = document.createElement('input') as HTMLInputElement
-    input.setAttribute('type', 'file')
-    input.setAttribute('accept', 'iamge/*')
-    input.click()
+  const modules = [
+    ['bold', 'italic', 'underline', 'strike'],
+    ['blockquote', 'code-block'],
+    [{ list: 'ordered' }, { list: 'bullet' }],
+    [{ script: 'sub' }, { script: 'super' }],
+    [{ indent: '-1' }, { indent: '+1' }],
+    [{ header: [1, 2, 3, 4, 5, 6, false] }],
+    [{ color: [] }, { background: [] }],
+    [{ font: [] }],
+    [{ align: [] }],
+    ['clean'],
+    ['link', 'image'],
+  ]
 
-    input.onchange = () => {
-      if (input.files !== null && /^image\//.test(input.files[0].type)) {
-        const file = input.files[0]
-        saveToFile(file)
-      } else {
-        console.warn('画像のみをアップロードできます。')
+  function useDidMount() {
+    console.log('//////')
+
+    const imager = () => {
+      const input = document.createElement('input')
+      input.setAttribute('type', 'file')
+      input.setAttribute('accept', 'iamge/*')
+      input.click()
+
+      input.onchange = () => {
+        if (input.files !== null && /^image\//.test(input.files[0].type)) {
+          const file = input.files[0]
+          saveToFile(file)
+        } else {
+          console.warn('画像のみをアップロードできます。')
+        }
       }
     }
-  }
 
-  const modules = {
-    toolbar: {
-      container: [
-        ['bold', 'italic', 'underline', 'strike'],
-        ['blockquote', 'code-block'],
-        [{ list: 'ordered' }, { list: 'bullet' }],
-        [{ script: 'sub' }, { script: 'super' }],
-        [{ indent: '-1' }, { indent: '+1' }],
-        [{ header: [1, 2, 3, 4, 5, 6, false] }],
-        [{ color: [] }, { background: [] }],
-        [{ font: [] }],
-        [{ align: [] }],
-        ['clean'],
-        ['link', 'image'],
-      ],
-      handlers: {
-        image: imager,
-      },
-    },
-  }
+    const el = editorRef.current.querySelector('#editor') as HTMLDivElement
+    console.log(editorRef)
+    if (editorRef.current) {
+      // const editors = editorRef.current.getElementsByClassName('editor')
+      // for (let index = 0; index < editors.length; index++) {
+      //   const quill = new Quill(editors[index], {
+      //       modules: {
+      //         toolbar: modules,
+      //       },
+      //       theme: 'snow',
+      //       placeholder: '文章を入力してください。',
+      //       readOnly: false,
+      //     })
+      //   quill.getModule('toolbar').addHandler('image', () => {
+      //     imager()
+      //   })
+      // }
 
-  const formats = [
-    'font',
-    'size',
-    'bold',
-    'italic',
-    'underline',
-    'strike',
-    'color',
-    'background',
-    'script',
-    'header',
-    'blockquote',
-    'code-block',
-    'indent',
-    'list',
-    'direction',
-    'align',
-    'link',
-    'image',
-    'video',
-    'formula',
-  ]
+      const quill = new Quill(el, {
+        modules: {
+          toolbar: modules,
+        },
+        theme: 'snow',
+        placeholder: '文章を入力してください。',
+        readOnly: false,
+      })
+      quill.getModule('toolbar').addHandler('image', () => {
+        imager()
+      })
+
+      // editorRef.current.getModule('toolbar')
+      //   .addHandler('image', () => {
+      //     imager()
+      //   })
+    }
+  }
 
   useEffect(() => {
     dispatch(getFetchBaseTasks())
@@ -130,7 +146,7 @@ function BordTask() {
   const createData = () => {
     const sendData = {
       title: title,
-      disc_content: quillRef.current,
+      disc_content: disc,
       user_name: username,
       play_item: Number(playItem),
       clear_item: Number(clearItem),
@@ -143,7 +159,7 @@ function BordTask() {
     const sendData = {
       id: viewId,
       title: title,
-      disc_content: quillRef.current,
+      disc_content: disc,
       user_name: username,
       play_item: Number(playItem),
       clear_item: Number(clearItem),
@@ -168,8 +184,7 @@ function BordTask() {
     setPlayItem(item.play_item)
     setClearItem(item.clear_item)
     setViewId(Number(item.id))
-    const editor = document.querySelector('#react-quill [contenteditable="true"]')
-    console.log(editor)
+    useDidMount()
   }
 
   const resetData = () => {
@@ -181,13 +196,8 @@ function BordTask() {
     setClearItem(0)
   }
 
-  const removeHtmlText = (data: string): string => {
-    const text = data.replace(/<("[^"]*"|'[^']*'|[^'">])*>/g, '')
-    return text.substr(0, 180)
-  }
-
   return (
-    <div className='box-task bord bord--task'>
+    <div className='box-task bord bord--task' ref={editorRef}>
       <CommonModal type={viewType} setMethods={resetData} ref={modalRef}>
         {viewType === 'edit' ? (
           <button className='btn delete' onClick={(e) => deleteData()}>
@@ -220,16 +230,16 @@ function BordTask() {
               <label htmlFor='disc' className='label'>
                 詳細
               </label>
-              <ReactQuill
-                id='react-quill'
-                modules={modules}
-                formats={formats}
-                theme='snow'
+              <div id='editor' onLoad={() => {}} />
+              <textarea
+                name='disc'
+                id='disc'
+                className='textarea'
                 defaultValue={disc}
-                onChange={(value: string) => {
-                  quillRef.current = value
+                onChange={(e) => {
+                  setDisc(e.target.value)
                 }}
-              />
+              ></textarea>
             </div>
             <div className='task-from__field'>
               <label htmlFor='username' className='label'>
@@ -295,7 +305,7 @@ function BordTask() {
             return (
               <li className='item' key={index} onClick={(e) => viewItem(item)}>
                 <p className='caption'>{item.title}</p>
-                <p className='disc'>{removeHtmlText(item.disc_content)}</p>
+                <p className='disc'>{item.disc_content}</p>
               </li>
             )
           })}
