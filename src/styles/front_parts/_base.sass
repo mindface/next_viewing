@@ -1,0 +1,220 @@
+
+@use "../mixin" as mx
+@use "../settings" as *
+
+*,
+*::before,
+*::after
+  box-sizing: border-box
+
+*
+  margin: 0
+  padding: 0
+
+html,
+body
+  height: 100%
+  width: 100%
+
+html
+  font-size: 62.5%
+
+body
+  -webkit-font-feature-settings: palt
+          font-feature-settings: palt
+  -webkit-box-sizing: border-box
+  box-sizing: border-box
+  background-color: $sub_color
+  color: $base_dark_color
+  font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "游ゴシック Medium", YuGothic, YuGothicM, "Hiragino Kaku Gothic ProN", メイリオ, Meiryo, sans-serif
+  -webkit-font-smoothing: antialiased
+  -moz-osx-font-smoothing: grayscale
+  position: relative
+  line-height: 1
+
+img
+  max-width: 100%
+  height: auto
+
+a
+  color: $base_dark_color
+  text-decoration: none
+
+.link
+  transition-duration: 1s
+  cursor: pointer
+  &:hover
+    background-color: $sub_dense_color
+    color: $white_color
+
+.textarea,
+.input
+  padding: 8px
+  border: none
+  box-shadow: 0 0 0 1px $base_dark_color
+
+.btn
+  display: inline-block
+  padding: 8px
+  background-color: $white_color
+  border-radius: 8px
+
+._flex_
+  display: flex
+  flex-wrap: wrap
+  &s_b_
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+  &c_
+    display: flex
+    flex-wrap: wrap
+    justify-content: center
+    align-items: center
+
+.__bg_white
+  background-color: $white_color
+.__sub_dense
+  background-color: $sub_dense_color
+.__bg_dark
+  background-color: $base_dark_color
+.__bg_gary_thin
+  background-color: $gary_thin_color
+
+.__btn
+  padding: 8px
+  font-size: 1.2rem
+  line-height: 1
+  border: none
+  cursor: pointer
+  box-shadow: 0 0 0 1px $sub_dense_color inset
+  @include mx.focusStyler()
+  &--primary
+    background-color: $white_color
+    color: $sub_dense_color
+    &:hover
+      color: #030e21
+      background-color: $white_color
+  &--right-blue
+    color: #00fbfc
+    padding: 10px 15px
+    border: 1px solid #00fbfc
+    background-color: #030e21
+    line-height: 1
+  &--danger
+    color: #C0392B
+    border: 1px solid #C0392B
+    &:hover
+      color: $white_color
+      background-color: #C0392B
+
+.__select
+  padding: 6px 8px
+  box-shadow: 0 0 0 1px $gray_color inset
+  border: none
+  line-height: 1
+
+.__base
+  &-header
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    padding: 0 20px
+    .header
+      &__title
+        display: inline-block
+        padding: 5px
+        background-color: $base_dark_color
+        font-size: 2rem
+        font-family: 'Viaoda Libre', cursive
+        color: $white_color
+  &-footer
+    position: absolute
+    left: 0
+    bottom: 0
+    width: 100%
+    .footer
+      &__title
+        text-align: center
+        color: $white_color
+
+._d_n_
+  display: none
+._d_b_
+  display: block
+._d_ib_
+  display: inline-block
+
+.__boxshadow
+  box-shadow: $boxShadow
+
+.__radius
+  border-radius: 8px
+
+.__limit-s
+  max-width: $small-px
+  width: 100%
+  margin: 0 auto
+
+.__limit-m
+  max-width: $middle-px
+  width: 100%
+  margin: 0 auto
+
+.__limit-l
+  max-width: $large-px
+  width: 100%
+  margin: 0 auto
+
+.__limit-w-l
+  max-width: $large-w-px
+  width: 100%
+  margin: 0 auto
+
+body
+  .__min-w-s
+    min-width: $small-px
+
+  .__min-w-m
+    min-width: $middle-px
+
+  .__min-w-l
+    min-width: $large-px
+
+  .__m-1
+    margin: 8px
+  .__m-2
+    margin: 16px
+
+  .__m-2y-1w
+    margin: 16px 8px 
+
+  .__p-1
+    padding: 8px
+  .__p-2
+    padding: 16px
+
+  .__p-2y-1w
+    padding: 16px 8px
+
+  .__m-r-8
+    margin-right: 8px
+  .__p-r-8
+    padding-right: 8px
+  .__p-r-16
+    padding-right: 16px
+  .__p-l-8
+    padding-left: 8px
+  .__p-l-16
+    padding-left: 16px
+  .__p-t-8
+    padding-top: 8px
+  .__p-t-16
+    padding-top: 16px
+  .__p-t-32
+    padding-top: 32px
+  .__p-b-8
+    padding-bottom: 8px
+  .__p-b-16
+    padding-bottom: 16px

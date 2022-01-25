@@ -1,0 +1,113 @@
+@use '../settings' as *
+@use '../mixin' as *
+
+.make-structure
+  .content
+    position: relative
+    &__top
+      .btn
+        position: absolute
+        top: 0
+        right: 0
+        cursor: pointer
+  .task-select
+    font-size: 1.2rem
+    font-weight: bold
+    .task
+      padding: 4px
+      cursor: pointer
+  .label
+    display: inline-block
+
+.selects__items,
+.structures
+  margin: 0 -8px
+  &-outer
+    padding: 16px
+    overflow-x: scroll
+    @include scrollerStyler()
+  &--event-none
+    pointer-events: none
+  .structure
+    position: relative
+    max-width: 240px
+    width: 100%
+    &:hover
+      .aid
+        display: flex
+    .aid
+      position: absolute
+      z-index: 1
+      right: 2px
+      bottom: calc(100% - 8px)
+      display: none
+      align-items: center
+      justify-content: center
+      width: 20px
+      height: 20px
+      background-color: $white_color
+      cursor: pointer
+  .item
+    position: relative
+    padding: 8px
+    line-height: 1.6
+    background-color: $white_color
+    &__header
+      margin: 0 0 4px
+      padding: 0 0 4px
+      border-bottom: 1px solid $sub_dense_color
+    &__body
+      padding: 0 0 4px
+    &__flow
+      position: relative
+      margin: 0 0 4px
+      &.b-line
+        margin: 0 0 24px
+        &::before
+          content: ""
+          position: absolute
+          top: calc(100% + 2px)
+          left: 4px
+          width: 1px
+          height: 20px
+          background-color: $sub_dense_color
+      &:last-child
+        margin: 0
+        &::before
+          display: none
+
+    &__bottom
+      border-top: 1px solid $sub_dense_color
+    &__category
+      padding: 4px
+      background-color: $sub_dense_color
+      color: $white_color
+    &__cat
+      position: absolute
+      left: 0
+      bottom: 100%
+      background-color: $white_color
+      box-shadow: 0 5px 0 0 $white_color,0 2px 5px 0 #ccc
+      border-radius: 4px 4px 0 0
+      .cat
+        padding: 2px 4px
+
+.structures
+  .item
+    margin: 0 8px 8px
+
+.selects
+  &__title
+    padding: 0 0 8px
+    margin: 8px 0
+    font-size: 1.2rem
+    font-weight: bold
+  &__items
+    .label
+      margin: 0 8px 8px
+    .input
+      display: none
+      &:checked
+        + .label
+          .item
+            box-shadow: 0 0 0 2px $sub_dense_color inset

@@ -1,0 +1,27 @@
+@use '../settings' as *
+
+.struct
+  position: relative
+  margin: 0 0 16px
+  padding: 16px
+  background-color: $white_color
+  .caption
+    display: inline-block
+    padding: 4px
+    margin: 0 0 8px
+    font-size: 1rem
+    border-bottom: 3px double $sub_dense_color
+  &__title
+    margin: 0 0 8px
+    padding: 0 0 8px
+    border-bottom: 1px solid $sub_dense_color
+    font-size: 1.4rem
+    font-weight: bold
+  &__disc
+    margin: 0 0 16px
+    padding: 8px 0
+    border-bottom: 1px solid $sub_dense_color
+    font-size: 1.4rem
+  &__parts
+    margin: 0 -8px
+    overflow-x: scroll

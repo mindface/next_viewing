@@ -1,0 +1,130 @@
+@use '../settings' as *
+@use '../animation' as animation
+@use '../mixin' as mx
+
+.modal-transfer
+  position: fixed
+  z-index: 10
+  top: 0
+  left: 0
+  display: flex
+  justify-content: center
+  align-items: center
+  height: 100vh
+  width: 100vw
+  background-color: $color_b_rgba_02
+  overflow-y: scroll
+
+.modal
+  &-outer
+    .btn
+      position: absolute
+      top: 8px
+      right: 8px
+      display: flex
+      justify-content: center
+      align-items: center
+      padding: 2px
+      border: solid 2px $base_dark_color
+      cursor: pointer
+    &.edit
+      .textarea,
+      .input
+        box-shadow: 0 0 0 1px $base_dark_color
+      [contenteditable="true"]
+        background-color: $sub_color
+    .add-task
+      .structure
+        > span.aid
+          display: none
+  &-box
+    position: relative
+    min-height: 320px
+    max-height: 90vh
+    max-width: 640px
+    width: 100%
+    margin: 0 auto
+    padding: 24px
+    background-color: $white_color
+    overflow: scroll
+    @include mx.swtchCheckStyler()
+    .m-title
+      padding: 0 0 8px
+      border-bottom: 1px solid $base_dark_color
+      font-size: 1.4rem
+      font-weight: bold
+    :not(.styler-switch)
+      .label
+        position: relative
+        display: inline-block
+        padding: 8px 0 
+        color: $base_dark_color
+        &::before
+          content: ""
+          width: 80px
+          height: 1px
+          position: absolute
+          left: calc(100% + 8px)
+          bottom: 12px
+          background-color: $base_dark_color
+    .field
+      padding: 8px 0
+      &-box
+        max-height: 80vh
+        padding: 16px
+        background-color: $white_color
+        overflow-y: scroll
+        .checker
+          display: none
+          font-size: 1.4rem
+          color: $red_color
+          &.view
+            display: block
+    .textarea
+      min-height: 180px
+    .textarea,
+    .input
+      width: 100%
+      padding: 8px
+      box-shadow: none
+      border-radius: 8px
+      &:hover
+        background-color: $sub_color
+        // color: $white_color
+    .close
+      position: absolute
+      top: 8px
+      left: calc(100% - 48px)
+    .delete
+      right: 56px
+      &:hover
+        color: $red_color
+  &-view
+    &__links
+      padding: 0 0 8px
+      .link
+        display: inline-block
+        padding: 4px
+        border-top: solid 1px $sub_dense_color
+        border-bottom: solid 1px $sub_dense_color
+        &:hover
+          img
+            display: inline-block
+            padding: 2px
+            color: $white_color
+    &__title
+      margin: 0 0 8px
+      padding: 8px 0
+      border-bottom: solid 1px $sub_dense_color
+      font-size: 1.6rem
+      font-weight: bold
+    &__content
+      padding: 0 0 16px
+
+.task-from
+  &__field
+    position: relative
+    padding: 8px 0 0
+  &__body
+    max-height: 320px
+    overflow-y: scroll
