@@ -83,8 +83,7 @@ function SectionMakeStructure() {
                 <p className='task-name' onClick={() => setTaskSelect(!taskSelect)}>
                   {taskTitle}
                 </p>
-                {taskSelect && (
-                  <div className='task-select'>
+                {taskSelect && <div className='task-select'>
                     {tasks.map((item: BaseTask) => (
                       <div
                         className='task'
@@ -94,8 +93,7 @@ function SectionMakeStructure() {
                         {item.title}
                       </div>
                     ))}
-                  </div>
-                )}
+                  </div>}
                 <label htmlFor='title' className='label'>
                   構造名
                 </label>
@@ -148,7 +146,7 @@ function SectionMakeStructure() {
         <div className='content__top'>
           <button
             className='btn __radius __boxshadow'
-            onClick={(e) => modalRef.current.modalAction()}
+            onClick={() => modalRef.current.modalAction()}
           >
             保存
           </button>

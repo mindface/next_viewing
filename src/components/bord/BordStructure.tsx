@@ -15,13 +15,22 @@ function BordStructure() {
   const structuralPats = useSelector(() => store.getState().structuralPat.structuralPats)
   const [title, setTitle] = useState('')
   const [disc, setDisc] = useState('')
-  const structurals = useRef([])
+  const structurals = useRef('')
   const [viewId, setViewId] = useState(0)
   const [pattern, setPattern] = useState('')
   const [taskId, setTaskId] = useState(0)
+  const [structureBlock, setStructureBlock] = useState('')
   const [viewType, setViewType] = useState('nobtn')
+  const structureRef = useRef(null)
 
   const modalRef = useRef({} as Handler)
+
+  const setWidth = (elementStr:string) => {
+    const targetString = "\"structure\""
+    const number = (elementStr.match(new RegExp(targetString, "g")) || [] ).length
+    // setStructureBlock(number !== 0 ? 320*number + 'px' : 'auto')
+    return number !== 0 ? 240*number + 'px' : 'auto'
+  }
 
   useEffect(() => {
     dispatch(getFetchStructuralPats())
@@ -39,7 +48,8 @@ function BordStructure() {
     setViewId(item.id)
     setTitle(item.title)
     setDisc(item.disc_content)
-    structurals.current = JSON.parse(item.structural)
+    structurals.current = item.structural
+    setWidth(item.structural)
   }
 
   const resetData = () => {
@@ -65,7 +75,7 @@ function BordStructure() {
                 </a>
               </Link>
               <Link href='/make_structure'>
-                <a className='link'>
+                <a className='link __m-l-8'>
                   構成モデル作成
                   <Image src='/images/make-struct.svg' alt='add svg' width={15} height={15} />
                 </a>
@@ -73,18 +83,13 @@ function BordStructure() {
             </div>
             <h3 className='modal-view__title'>{title}</h3>
             <div className='modal-view__content'>{disc}</div>
-            <div className='structures _flex_'>
-              {structurals.current.map((item: StructuralItem) => {
-                return (
-                  <div className='structure' key={item.selectId}>
-                    <div
-                      className='item __radius __boxshadow'
-                      key={item.id}
-                      dangerouslySetInnerHTML={{ __html: item.content }}
-                    ></div>
-                  </div>
-                )
-              })}
+            <div className="structures-outer">
+              <div
+                className='structures structures--event-none _flex_'
+                style={{width:setWidth(structurals.current)}}
+                ref={structureRef}
+                dangerouslySetInnerHTML={{ __html: structurals.current }}
+              ></div>
             </div>
           </div>
         </CommonModal>

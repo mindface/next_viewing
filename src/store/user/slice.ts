@@ -46,6 +46,7 @@ const UserSlice = createSlice({
       state.loading = false
       state.error = null
       state.user_token = action.payload.token
+      localStorage.setItem('token',action.payload.token)
     },
   },
 })
@@ -81,7 +82,7 @@ export const getUser = (name: string) => async (dispatch: any, state: userState)
     const data = await res.json()
     if (res.status < 400) {
       dispatch(userFetchSuccess(data))
-      window.location.href = '/dashbord'
+      // window.location.href = '/dashbord'
       //  route.push('/dashbord')
     }
   } catch {
@@ -100,8 +101,9 @@ export const resetUser = () => async (dispatch: any, state: userState) => {
         last_name: 'logout',
       }),
     )
+    localStorage.removeItem('token')
     dispatch(userTokenFetchSuccess(''))
-    window.location.href = '/login'
+    // window.location.href = '/login'
   }, 600)
 }
 

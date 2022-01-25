@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import Link from 'next/link'
 import { useStore, useDispatch, useSelector } from 'react-redux'
 import { resetUser } from '../store/user/slice'
+import { useRouter } from 'next/router'
 
 interface propsType {
   title: string
@@ -10,6 +11,7 @@ interface propsType {
 function IndexHeader(props: propsType) {
   const dispatch = useDispatch()
   const store = useStore()
+  const router = useRouter()
   const token = useSelector(() => store.getState().user.user_token)
 
   const links = [
@@ -20,7 +22,13 @@ function IndexHeader(props: propsType) {
 
   function logoutAction() {
     dispatch(resetUser())
+    localStorage.setItem('token','')
+    console.log(window.localStorage.getItem('token'))
   }
+
+  useEffect(() => {
+    router.push('dashbord')
+  },[])
 
   return (
     <header className='index-header'>

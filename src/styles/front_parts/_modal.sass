@@ -100,8 +100,24 @@
       &:hover
         color: $red_color
   &-view
+    &__links
+      padding: 0 0 8px
+      .link
+        display: inline-block
+        padding: 4px
+        border-top: solid 1px $sub_dense_color
+        border-bottom: solid 1px $sub_dense_color
+        &:hover
+          img
+            display: inline-block
+            padding: 2px
+            color: $white_color
     &__title
+      margin: 0 0 8px
       padding: 8px 0
+      border-bottom: solid 1px $sub_dense_color
+      font-size: 1.6rem
+      font-weight: bold
     &__content
       padding: 0 0 16px
 

@@ -20,7 +20,17 @@ export default function IndexLayout({
   const store = useStore()
   const user = useSelector(() => store.getState().user)
 
-  React.useEffect(() => {}, [])
+  const RouteChangeHandle = () => {
+    if(window.localStorage.getItem('token') === 'undefined' && router.pathname !== '/login') {
+      router.push('login')
+    }else if(window.localStorage.getItem('token') !== 'undefined' && router.pathname === '/login'){
+      router.push('dashbord')
+    }
+  }
+
+  React.useEffect(() => {
+    RouteChangeHandle()
+  })
 
   return (
     <>

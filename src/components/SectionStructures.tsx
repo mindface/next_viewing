@@ -95,7 +95,7 @@ function SectionStructures() {
     <section className='l-section section--structure _flex_c_'>
       <div className='content __limit-l'>
         <div className='content__title _flex_'>
-          <h3 className='title'>構造を一覧</h3>
+          <h3 className='title'>構造一覧</h3>
         </div>
         <div className='content__bottom content__bottom--fixed'>
           <Link href='/make_structure'>
@@ -202,9 +202,15 @@ function SectionStructures() {
                   </div>
                 </CommonModal>
                 <div className='struct__title'>
+                  <p className="caption">タイトル</p>
                   <h3 className='title'>{structuralInfo.title}</h3>
                 </div>
-                <div className='struct__disc'>{structuralInfo.disc_content}</div>
+                <div className='struct__disc'>
+                  <p className="caption">詳細</p>
+                  <div className="disc">
+                    {structuralInfo.disc_content}
+                  </div>
+                </div>
               </div>
             )
           })}

@@ -1,6 +1,4 @@
 import { createSlice, PayloadAction, Dispatch } from '@reduxjs/toolkit'
-import { rejects } from 'assert'
-import { resolve } from 'path'
 import { TaskPremise, AddTaskPremise, UpdateTaskPremise } from '../../models/TaskPremise'
 import { FetchApi } from '../../api/fetch-api'
 

@@ -10,6 +10,30 @@
   box-shadow: $boxShadow
   &--login
     background-color: $white_color
+  &--make-structure
+    padding: 0 16px
   &--structure
     .link
       display: inline-block
+  &--about
+    .content
+      padding: 16px 16px
+      background-color: rgba(0, 0, 0, 0.8)
+      color: #8ce300
+      font-weight: bold
+      .link
+        color: #8ce300
+      &__title
+        .title
+          position: absolute
+          top: 5vw
+          left: 10vw
+          z-index: -1
+          color: #fff
+          font-size: 15vw
+          text-shadow: 0 3px 0 #ccc
+    .item
+      padding: 16px 0 0
+      &__title
+        padding: 0 0 8px
+        font-size: 2rem

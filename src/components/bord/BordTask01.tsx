@@ -84,7 +84,6 @@ function BordTask() {
   ]
 
   function useDidMount() {
-    console.log('//////')
 
     const imager = () => {
       const input = document.createElement('input')
