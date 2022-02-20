@@ -1,4 +1,4 @@
-import React, { useRef, useState, useEffect } from 'react'
+import React, { useRef, useState, useEffect, Suspense } from 'react'
 import dynamic from 'next/dynamic'
 import { useStore, useDispatch, useSelector } from 'react-redux'
 import { getFetchBaseTasks } from '../../store/baseTask/slice'
@@ -20,7 +20,7 @@ function BordTask() {
   const store = useStore()
   const dispatch = useDispatch()
   const tasks = useSelector(() => store.getState().baseTask.baseTasks)
-  const [title, setTitle] = useState('')
+  const title = useRef('')
   const [disc, setDisc] = useState('')
   const [username, setUsername] = useState('')
   const [playItem, setPlayItem] = useState(0)
@@ -129,7 +129,7 @@ function BordTask() {
 
   const createData = () => {
     const sendData = {
-      title: title,
+      title: title.current,
       disc_content: quillRef.current,
       user_name: username,
       play_item: Number(playItem),
@@ -142,7 +142,7 @@ function BordTask() {
   const updateData = () => {
     const sendData = {
       id: viewId,
-      title: title,
+      title: title.current,
       disc_content: quillRef.current,
       user_name: username,
       play_item: Number(playItem),
@@ -162,7 +162,7 @@ function BordTask() {
   const viewItem = async (item: BaseTask) => {
     modalRef.current.modalAction()
     setViewType('edit')
-    setTitle(item.title)
+    title.current = item.title
     setDisc(item.disc_content)
     setUsername(item.user_name)
     setPlayItem(item.play_item)
@@ -174,7 +174,7 @@ function BordTask() {
 
   const resetData = () => {
     setViewType('new')
-    setTitle('')
+    title.current = ''
     setDisc('')
     setUsername('')
     setPlayItem(0)
@@ -210,9 +210,9 @@ function BordTask() {
                 className='input'
                 name='title'
                 id='title'
-                defaultValue={title}
+                defaultValue={title.current}
                 onChange={(e) => {
-                  setTitle(e.target.value)
+                  title.current = e.target.value
                 }}
               />
             </div>
@@ -290,6 +290,7 @@ function BordTask() {
         <h3 className='title'>タスク詳細</h3>
       </div>
       <div className='box-task__body'>
+      <Suspense fallback={<div>Now Loading</div>}>
         <ul className='list'>
           {tasks.map((item: BaseTask, index: number) => {
             return (
@@ -300,6 +301,7 @@ function BordTask() {
             )
           })}
         </ul>
+      </Suspense>
       </div>
     </div>
   )

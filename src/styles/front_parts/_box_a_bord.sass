@@ -1,4 +1,5 @@
 @use '../settings' as *
+@use '../mixin' as *
 
 .box
   &-task
@@ -9,6 +10,7 @@
     &__body
       max-height: 320px
       overflow-y: scroll
+      @include scrollerStyler()
 
 .bord
   &--plan

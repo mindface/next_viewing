@@ -18,8 +18,11 @@ function IndexHeader(props: propsType) {
     { id: 1, path: '/dashbord', text: 'home' },
     { id: 2, path: '/about', text: 'about' },
     { id: 3, path: '/structures', text: 'structures' },
+    { id: 4, path: '/info_settings', text: 'info_settings' },
+    { id: 5, path: '/make_canvas', text: '[wip]make_canvas' },
+    { id: 6, path: '/searcher', text: 'searcher' },
   ]
-
+  
   function logoutAction() {
     dispatch(resetUser())
     localStorage.setItem('token','')
@@ -27,7 +30,7 @@ function IndexHeader(props: propsType) {
   }
 
   useEffect(() => {
-    router.push('dashbord')
+    // router.push('dashbord')
   },[])
 
   return (

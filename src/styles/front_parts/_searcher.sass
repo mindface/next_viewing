@@ -1,0 +1,17 @@
+@use '../settings' as *
+
+.searcher
+  .content
+    &__title
+    &__body
+      .link
+        display: inline-block
+        padding: 8px
+        &:hover
+          background-color: $sub_dense_color
+          color: $white_color
+      .results
+        padding: 0 8px
+        max-width: 33.333%
+        text-overflow: ellipsis
+        white-space: nowrap

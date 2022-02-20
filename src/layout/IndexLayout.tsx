@@ -29,7 +29,6 @@ export default function IndexLayout({
   }
 
   React.useEffect(() => {
-    RouteChangeHandle()
   })
 
   return (

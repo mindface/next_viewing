@@ -1,5 +1,7 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit'
 import { Logtools, PostLogtools } from '../../models/logtools'
+import { FetchApi } from '../../api/fetch-api'
+const fetchApi = new FetchApi()
 
 export type LogtoolsState = {
   loading: boolean
@@ -83,6 +85,24 @@ export const createFetchLogs = (data: PostLogtools) => async (dispatch: any) => 
     if (res.status < 400) {
       dispatch(logsFetchSuccess(re_data))
     }
+  } catch {
+    dispatch(logsFetchFailure)
+  }
+}
+
+export const searchData = (text:string) => async (dispatch: any) => {
+  try {
+    dispatch(logsFetchStart)
+    fetchApi
+      .PostFetch<{text:string}>('http://localhost:8008/toolData/index/',{text:text})
+      .then((res) => {
+        console.log(res)
+        dispatch(logsFetchSuccess(res))
+      })
+      .catch((err) => {
+        dispatch(logsFetchFailure(err))
+      })
+
   } catch {
     dispatch(logsFetchFailure)
   }

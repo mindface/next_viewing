@@ -1,0 +1,402 @@
+[
+  {
+    "id": 0,
+    "link": "https://developer.mozilla.org/ja/docs/WebAssembly",
+    "text": "WebAssembly - MDN Web Docs"
+  },
+  {
+    "id": 1,
+    "link": "https://qiita.com/ShuntaShirai/items/3ac92412720789576f22",
+    "text": "WebAssemblyとは - Qiita"
+  },
+  {
+    "id": 2,
+    "link": "https://e-words.jp/w/WebAssembly.html",
+    "text": "WebAssembly（WASM）とは - IT用語辞典 e-Words"
+  },
+  {
+    "id": 3,
+    "link": "https://ja.wikipedia.org/wiki/WebAssembly",
+    "text": "WebAssembly - Wikipedia"
+  },
+  {
+    "id": 4,
+    "link": "https://logmi.jp/tech/articles/324956",
+    "text": "WebAssemblyはJVMやeBPFのリバイバルではない Wasmが ..."
+  },
+  {
+    "id": 5,
+    "link": "https://www.kabuku.co.jp/developers/annoying-go-wasm",
+    "text": "GoのWASMがライブラリではなくアプリケーションであること"
+  },
+  {
+    "id": 6,
+    "link": "https://webassembly.org/",
+    "text": "WebAssembly"
+  },
+  {
+    "id": 7,
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/01818/101500003/",
+    "text": "WebAssemblyが有効な3つのユースケース、JavaScriptとの ..."
+  },
+  {
+    "id": 8,
+    "link": "https://dev.classmethod.jp/articles/rust-webassembly-javascript/",
+    "text": "RustからWebAssembly (wasm)を生成してJavaScriptと ..."
+  },
+  {
+    "id": 9,
+    "link": "https://thinkit.co.jp/article/18714",
+    "text": "WASMを実行するためのランタイム、wasmCloudがCNCFの ..."
+  },
+  {
+    "id": 0,
+    "link": "https://zenn.dev/igrep/articles/2021-11-wasm-reference-types",
+    "text": "WebAssembly Reference Typesで、WasmでDOMを操作する ..."
+  },
+  {
+    "id": 1,
+    "link": "https://zenn.dev/topics/wasm",
+    "text": "wasmの記事一覧 | Zenn"
+  },
+  {
+    "id": 2,
+    "link": "https://tech.smartcamp.co.jp/entry/wasm-walkthrough",
+    "text": "TypeScriptやGoやRustでWebAssemblyウォークスルー"
+  },
+  {
+    "id": 3,
+    "link": "https://rustwasm.github.io/docs/wasm-pack/",
+    "text": "Hello wasm-pack! - Rust and WebAssembly"
+  },
+  {
+    "id": 4,
+    "link": "https://www.publickey1.jp/blog/22/amazon_prime_videowebassemblywasm_vm.html",
+    "text": "Amazon Prime Videoが動画再生にWebAssembly ... - Publickey"
+  },
+  {
+    "id": 5,
+    "link": "https://users.soracom.io/ja-jp/docs/orbit/development/",
+    "text": "WASM モジュールの開発とテスト | SORACOM Orbit"
+  },
+  {
+    "id": 6,
+    "link": "https://github.com/rustwasm/wasm-bindgen",
+    "text": "rustwasm/wasm-bindgen - GitHub"
+  },
+  {
+    "id": 7,
+    "link": "https://forest.watch.impress.co.jp/docs/serial/yajiuma/1345710.html",
+    "text": "動画をブラウザーだけで変換 ～「FFmpeg」をWebAssembly ..."
+  },
+  {
+    "id": 8,
+    "link": "https://www.infoq.com/jp/news/2022/01/ebpf-wasm-service-mesh/",
+    "text": "eBPF と Wasm: サービスメッシュデータプレーンの未来を探る"
+  },
+  {
+    "id": 9,
+    "link": "https://www.rust-lang.org/ja/what/wasm",
+    "text": "WebAssembly - Rustプログラミング言語"
+  },
+  {
+    "id": 0,
+    "link": "https://developer.mozilla.org/ja/docs/WebAssembly",
+    "text": "WebAssembly - MDN Web Docs"
+  },
+  {
+    "id": 1,
+    "link": "https://qiita.com/ShuntaShirai/items/3ac92412720789576f22",
+    "text": "WebAssemblyとは - Qiita"
+  },
+  {
+    "id": 2,
+    "link": "https://e-words.jp/w/WebAssembly.html",
+    "text": "WebAssembly（WASM）とは - IT用語辞典 e-Words"
+  },
+  {
+    "id": 3,
+    "link": "https://ja.wikipedia.org/wiki/WebAssembly",
+    "text": "WebAssembly - Wikipedia"
+  },
+  {
+    "id": 4,
+    "link": "https://logmi.jp/tech/articles/324956",
+    "text": "WebAssemblyはJVMやeBPFのリバイバルではない Wasmが ..."
+  },
+  {
+    "id": 5,
+    "link": "https://www.kabuku.co.jp/developers/annoying-go-wasm",
+    "text": "GoのWASMがライブラリではなくアプリケーションであること"
+  },
+  {
+    "id": 6,
+    "link": "https://webassembly.org/",
+    "text": "WebAssembly"
+  },
+  {
+    "id": 7,
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/01818/101500003/",
+    "text": "WebAssemblyが有効な3つのユースケース、JavaScriptとの ..."
+  },
+  {
+    "id": 8,
+    "link": "https://dev.classmethod.jp/articles/rust-webassembly-javascript/",
+    "text": "RustからWebAssembly (wasm)を生成してJavaScriptと ..."
+  },
+  {
+    "id": 9,
+    "link": "https://thinkit.co.jp/article/18714",
+    "text": "WASMを実行するためのランタイム、wasmCloudがCNCFの ..."
+  },
+  {
+    "id": 0,
+    "link": "https://zenn.dev/igrep/articles/2021-11-wasm-reference-types",
+    "text": "WebAssembly Reference Typesで、WasmでDOMを操作する ..."
+  },
+  {
+    "id": 1,
+    "link": "https://zenn.dev/topics/wasm",
+    "text": "wasmの記事一覧 | Zenn"
+  },
+  {
+    "id": 2,
+    "link": "https://tech.smartcamp.co.jp/entry/wasm-walkthrough",
+    "text": "TypeScriptやGoやRustでWebAssemblyウォークスルー"
+  },
+  {
+    "id": 3,
+    "link": "https://rustwasm.github.io/docs/wasm-pack/",
+    "text": "Hello wasm-pack! - Rust and WebAssembly"
+  },
+  {
+    "id": 4,
+    "link": "https://www.publickey1.jp/blog/22/amazon_prime_videowebassemblywasm_vm.html",
+    "text": "Amazon Prime Videoが動画再生にWebAssembly ... - Publickey"
+  },
+  {
+    "id": 5,
+    "link": "https://users.soracom.io/ja-jp/docs/orbit/development/",
+    "text": "WASM モジュールの開発とテスト | SORACOM Orbit"
+  },
+  {
+    "id": 6,
+    "link": "https://github.com/rustwasm/wasm-bindgen",
+    "text": "rustwasm/wasm-bindgen - GitHub"
+  },
+  {
+    "id": 7,
+    "link": "https://forest.watch.impress.co.jp/docs/serial/yajiuma/1345710.html",
+    "text": "動画をブラウザーだけで変換 ～「FFmpeg」をWebAssembly ..."
+  },
+  {
+    "id": 8,
+    "link": "https://www.infoq.com/jp/news/2022/01/ebpf-wasm-service-mesh/",
+    "text": "eBPF と Wasm: サービスメッシュデータプレーンの未来を探る"
+  },
+  {
+    "id": 9,
+    "link": "https://www.rust-lang.org/ja/what/wasm",
+    "text": "WebAssembly - Rustプログラミング言語"
+  },
+  {
+    "id": 0,
+    "link": "https://developer.mozilla.org/ja/docs/WebAssembly",
+    "text": "WebAssembly - MDN Web Docs"
+  },
+  {
+    "id": 1,
+    "link": "https://qiita.com/ShuntaShirai/items/3ac92412720789576f22",
+    "text": "WebAssemblyとは - Qiita"
+  },
+  {
+    "id": 2,
+    "link": "https://e-words.jp/w/WebAssembly.html",
+    "text": "WebAssembly（WASM）とは - IT用語辞典 e-Words"
+  },
+  {
+    "id": 3,
+    "link": "https://ja.wikipedia.org/wiki/WebAssembly",
+    "text": "WebAssembly - Wikipedia"
+  },
+  {
+    "id": 4,
+    "link": "https://logmi.jp/tech/articles/324956",
+    "text": "WebAssemblyはJVMやeBPFのリバイバルではない Wasmが ..."
+  },
+  {
+    "id": 5,
+    "link": "https://www.kabuku.co.jp/developers/annoying-go-wasm",
+    "text": "GoのWASMがライブラリではなくアプリケーションであること"
+  },
+  {
+    "id": 6,
+    "link": "https://webassembly.org/",
+    "text": "WebAssembly"
+  },
+  {
+    "id": 7,
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/01818/101500003/",
+    "text": "WebAssemblyが有効な3つのユースケース、JavaScriptとの ..."
+  },
+  {
+    "id": 8,
+    "link": "https://dev.classmethod.jp/articles/rust-webassembly-javascript/",
+    "text": "RustからWebAssembly (wasm)を生成してJavaScriptと ..."
+  },
+  {
+    "id": 9,
+    "link": "https://thinkit.co.jp/article/18714",
+    "text": "WASMを実行するためのランタイム、wasmCloudがCNCFの ..."
+  },
+  {
+    "id": 0,
+    "link": "https://zenn.dev/igrep/articles/2021-11-wasm-reference-types",
+    "text": "WebAssembly Reference Typesで、WasmでDOMを操作する ..."
+  },
+  {
+    "id": 1,
+    "link": "https://zenn.dev/topics/wasm",
+    "text": "wasmの記事一覧 | Zenn"
+  },
+  {
+    "id": 2,
+    "link": "https://tech.smartcamp.co.jp/entry/wasm-walkthrough",
+    "text": "TypeScriptやGoやRustでWebAssemblyウォークスルー"
+  },
+  {
+    "id": 3,
+    "link": "https://rustwasm.github.io/docs/wasm-pack/",
+    "text": "Hello wasm-pack! - Rust and WebAssembly"
+  },
+  {
+    "id": 4,
+    "link": "https://www.publickey1.jp/blog/22/amazon_prime_videowebassemblywasm_vm.html",
+    "text": "Amazon Prime Videoが動画再生にWebAssembly ... - Publickey"
+  },
+  {
+    "id": 5,
+    "link": "https://users.soracom.io/ja-jp/docs/orbit/development/",
+    "text": "WASM モジュールの開発とテスト | SORACOM Orbit"
+  },
+  {
+    "id": 6,
+    "link": "https://github.com/rustwasm/wasm-bindgen",
+    "text": "rustwasm/wasm-bindgen - GitHub"
+  },
+  {
+    "id": 7,
+    "link": "https://forest.watch.impress.co.jp/docs/serial/yajiuma/1345710.html",
+    "text": "動画をブラウザーだけで変換 ～「FFmpeg」をWebAssembly ..."
+  },
+  {
+    "id": 8,
+    "link": "https://www.infoq.com/jp/news/2022/01/ebpf-wasm-service-mesh/",
+    "text": "eBPF と Wasm: サービスメッシュデータプレーンの未来を探る"
+  },
+  {
+    "id": 9,
+    "link": "https://www.rust-lang.org/ja/what/wasm",
+    "text": "WebAssembly - Rustプログラミング言語"
+  },
+  {
+    "id": 0,
+    "link": "https://developer.mozilla.org/ja/docs/WebAssembly",
+    "text": "WebAssembly - MDN Web Docs"
+  },
+  {
+    "id": 1,
+    "link": "https://qiita.com/ShuntaShirai/items/3ac92412720789576f22",
+    "text": "WebAssemblyとは - Qiita"
+  },
+  {
+    "id": 2,
+    "link": "https://e-words.jp/w/WebAssembly.html",
+    "text": "WebAssembly（WASM）とは - IT用語辞典 e-Words"
+  },
+  {
+    "id": 3,
+    "link": "https://ja.wikipedia.org/wiki/WebAssembly",
+    "text": "WebAssembly - Wikipedia"
+  },
+  {
+    "id": 4,
+    "link": "https://logmi.jp/tech/articles/324956",
+    "text": "WebAssemblyはJVMやeBPFのリバイバルではない Wasmが ..."
+  },
+  {
+    "id": 5,
+    "link": "https://www.kabuku.co.jp/developers/annoying-go-wasm",
+    "text": "GoのWASMがライブラリではなくアプリケーションであること"
+  },
+  {
+    "id": 6,
+    "link": "https://webassembly.org/",
+    "text": "WebAssembly"
+  },
+  {
+    "id": 7,
+    "link": "https://xtech.nikkei.com/atcl/nxt/column/18/01818/101500003/",
+    "text": "WebAssemblyが有効な3つのユースケース、JavaScriptとの ..."
+  },
+  {
+    "id": 8,
+    "link": "https://dev.classmethod.jp/articles/rust-webassembly-javascript/",
+    "text": "RustからWebAssembly (wasm)を生成してJavaScriptと ..."
+  },
+  {
+    "id": 9,
+    "link": "https://thinkit.co.jp/article/18714",
+    "text": "WASMを実行するためのランタイム、wasmCloudがCNCFの ..."
+  },
+  {
+    "id": 0,
+    "link": "https://zenn.dev/igrep/articles/2021-11-wasm-reference-types",
+    "text": "WebAssembly Reference Typesで、WasmでDOMを操作する ..."
+  },
+  {
+    "id": 1,
+    "link": "https://zenn.dev/topics/wasm",
+    "text": "wasmの記事一覧 | Zenn"
+  },
+  {
+    "id": 2,
+    "link": "https://tech.smartcamp.co.jp/entry/wasm-walkthrough",
+    "text": "TypeScriptやGoやRustでWebAssemblyウォークスルー"
+  },
+  {
+    "id": 3,
+    "link": "https://rustwasm.github.io/docs/wasm-pack/",
+    "text": "Hello wasm-pack! - Rust and WebAssembly"
+  },
+  {
+    "id": 4,
+    "link": "https://www.publickey1.jp/blog/22/amazon_prime_videowebassemblywasm_vm.html",
+    "text": "Amazon Prime Videoが動画再生にWebAssembly ... - Publickey"
+  },
+  {
+    "id": 5,
+    "link": "https://users.soracom.io/ja-jp/docs/orbit/development/",
+    "text": "WASM モジュールの開発とテスト | SORACOM Orbit"
+  },
+  {
+    "id": 6,
+    "link": "https://github.com/rustwasm/wasm-bindgen",
+    "text": "rustwasm/wasm-bindgen - GitHub"
+  },
+  {
+    "id": 7,
+    "link": "https://forest.watch.impress.co.jp/docs/serial/yajiuma/1345710.html",
+    "text": "動画をブラウザーだけで変換 ～「FFmpeg」をWebAssembly ..."
+  },
+  {
+    "id": 8,
+    "link": "https://www.infoq.com/jp/news/2022/01/ebpf-wasm-service-mesh/",
+    "text": "eBPF と Wasm: サービスメッシュデータプレーンの未来を探る"
+  },
+  {
+    "id": 9,
+    "link": "https://www.rust-lang.org/ja/what/wasm",
+    "text": "WebAssembly - Rustプログラミング言語"
+  }
+]

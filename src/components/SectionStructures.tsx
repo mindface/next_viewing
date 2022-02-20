@@ -7,6 +7,7 @@ import {
   deleteFetchStructuralPat,
 } from '../store/structuralPattern/slice'
 import { BaseTask } from '../models/baseTask'
+import { setWidth } from '../utils/set-style'
 import { StructuralPattern, StructuralItem } from '../models/StructuralPattern'
 import CommonModal, { Handler } from './common/CommonModal'
 import Image from 'next/image'
@@ -188,12 +189,15 @@ function SectionStructures() {
                       </div>
                       <div className='task-from__field'>
                         <div
-                          className='struct__parts __p-t-32 _flex_'
-                          ref={structDom}
-                          dangerouslySetInnerHTML={{
-                            __html: structuralInfo.structural,
-                          }}
-                        ></div>
+                          className='struct__parts __p-t-32'
+                          ref={structDom}>
+                          <div className='structures _flex_'
+                            style={{width:setWidth(structuralInfo.structural)}}
+                            dangerouslySetInnerHTML={{
+                              __html: structuralInfo.structural,
+                            }}>
+                          </div>
+                          </div>
                       </div>
                       <div className='task-from__field'>
                         <input type='submit' className='input' value='更新' onClick={update} />

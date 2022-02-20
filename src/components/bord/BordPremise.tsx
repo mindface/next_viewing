@@ -15,7 +15,7 @@ function BordPremise() {
   const dispatch = useDispatch()
   const premise = useSelector(() => store.getState().taskPremise.taskPremise)
   const [title, setTitle] = useState('')
-  const [disc, setDisc] = useState('')
+  const disc = useRef('')
   const [taskId, setTaskId] = useState(0)
   const [viewId, setViewId] = useState(0)
   const [viewType, setViewType] = useState('new')
@@ -31,7 +31,7 @@ function BordPremise() {
   const createData = () => {
     const sendData = {
       title: title,
-      disc_content: disc,
+      disc_content: disc.current,
       task_id: Number(taskId),
     }
     dispatch(createFetchTaskPremise(sendData))
@@ -42,7 +42,7 @@ function BordPremise() {
     const sendData = {
       id: viewId,
       title: title,
-      disc_content: disc,
+      disc_content: disc.current,
       task_id: Number(taskId),
     }
     dispatch(updateFetchTaskPremise(sendData))
@@ -61,7 +61,7 @@ function BordPremise() {
     setViewType('edit')
     setViewSwitch(true)
     setTitle(item.title)
-    setDisc(item.disc_content)
+    disc.current = item.disc_content
     setTaskId(item.task_id)
     setViewId(item.id)
   }
@@ -69,7 +69,7 @@ function BordPremise() {
   const resetData = () => {
     setViewType('new')
     setTitle('タスクを選んでください')
-    setDisc('')
+    disc.current = ''
     setTaskId(0)
   }
 
@@ -120,9 +120,9 @@ function BordPremise() {
                   name='disc'
                   id='disc'
                   className='textarea'
-                  defaultValue={disc}
+                  defaultValue={disc.current}
                   onChange={(e) => {
-                    setDisc(e.target.value)
+                    disc.current = e.target.value
                   }}
                 ></textarea>
               </div>
@@ -135,7 +135,7 @@ function BordPremise() {
                   className='input'
                   name='play_item'
                   id='defaultValue={disc} '
-                  defaultValue={disc}
+                  defaultValue={taskId}
                   onChange={(e) => {
                     setTaskId(Number(e.target.value))
                   }}

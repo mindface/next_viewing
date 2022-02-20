@@ -21,7 +21,7 @@
 
 .selects__items,
 .structures
-  margin: 0 -8px
+  margin: 0 8px
   &-outer
     padding: 16px
     overflow-x: scroll
@@ -111,3 +111,10 @@
         + .label
           .item
             box-shadow: 0 0 0 2px $sub_dense_color inset
+.modal
+  &-box
+    .struct
+      &__parts
+        margin: 0 -8px
+        overflow-x: scroll
+        @include scrollerStyler()

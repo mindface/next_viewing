@@ -1,0 +1,562 @@
+[
+  {
+    "00": {
+      "id": 0,
+      "link": "https://note.com/kawa1228/n/nffd845b0ada5",
+      "text": "Node.jsでWEBデータを収集してCSV化する - note"
+    }
+  },
+  {
+    "01": {
+      "id": 1,
+      "link": "https://blog.honjala.net/entry/2018/08/17/005719",
+      "text": "node.jsでWebスクレイピングして取得データを保存する"
+    }
+  },
+  {
+    "02": {
+      "id": 2,
+      "link": "https://docs.datadoghq.com/ja/logs/log_collection/nodejs/",
+      "text": "NodeJS ログ収集 - Datadog Docs"
+    }
+  },
+  {
+    "03": {
+      "id": 3,
+      "link": "https://www.alibabacloud.com/help/ja/doc-detail/28991.htm",
+      "text": "Node.js ログ - データ収集| Alibaba Cloud ドキュメントセンター"
+    }
+  },
+  {
+    "04": {
+      "id": 4,
+      "link": "https://www.ibm.com/docs/ja/SSMKFH/com.ibm.apmaas.doc/install/nodejs_config_dc_adv.htm",
+      "text": "Node.js エージェントの診断データ・コレクターの構成 - IBM"
+    }
+  },
+  {
+    "05": {
+      "id": 5,
+      "link": "https://www.slideshare.net/mazdachihiro/nodejs-62280397",
+      "text": "Node.jsでデータ収集して デスクトップアプリを作ろう！"
+    }
+  },
+  {
+    "06": {
+      "id": 6,
+      "link": "https://paiza.jp/career/job_offers/8909",
+      "text": "【Node.js】Webサイトを解析して変化データを収集・分析 ..."
+    }
+  },
+  {
+    "07": {
+      "id": 7,
+      "link": "https://developer.mozilla.org/ja/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data",
+      "text": "サーバからのデータ取得 - ウェブ開発を学ぶ - MDN Web Docs"
+    }
+  },
+  {
+    "08": {
+      "id": 8,
+      "link": "https://qiita.com/raichi/items/d371bf3fe6ddec168725",
+      "text": "Node.jsをOpenTelemetryでメトリック収集してみる - Qiita"
+    }
+  },
+  {
+    "09": {
+      "id": 9,
+      "link": "https://docs.microsoft.com/ja-jp/azure/azure-monitor/app/nodejs",
+      "text": "Azure Application Insights を使用して Node.js サービスを監視 ..."
+    }
+  },
+  {
+    "10": {
+      "id": 0,
+      "link": "https://qiita.com/shumatsukishu/items/86c8415a3a052de9e117",
+      "text": "データ収集めんどくさいからプログラム書いちゃお - Qiita"
+    }
+  },
+  {
+    "11": {
+      "id": 1,
+      "link": "https://docs.newrelic.com/jp/docs/apm/agents/nodejs-agent/api-guides/guide-using-nodejs-agent-api/",
+      "text": "Node.jsのエージェントAPIを使用するためのガイド - New ..."
+    }
+  },
+  {
+    "12": {
+      "id": 2,
+      "link": "https://jobhub.jp/co_workers/skills/nodejs",
+      "text": "Node.jsへ依頼・外注・料金比較【ジョブハブ】"
+    }
+  },
+  {
+    "13": {
+      "id": 3,
+      "link": "https://crowdworks.jp/public/jobs/6094950",
+      "text": "【Webエンジニア募集】Node.jsを使ったWebスクレイピングによる ..."
+    }
+  },
+  {
+    "14": {
+      "id": 4,
+      "link": "https://docs.appdynamics.com/21.3/ja/analytics/configure-analytics/collect-transaction-analytics-data/configure-transaction-analytics-for-node-js-and-php-applications",
+      "text": "Node.js および PHP アプリケーション用のトランザクション分析の ..."
+    }
+  },
+  {
+    "15": {
+      "id": 5,
+      "link": "https://www.wenyanet.com/opensource/ja/611f3f7ad7cfff278335d76b.html",
+      "text": "nodejsによって作成された一連のWebページデータ収集フレーム ..."
+    }
+  },
+  {
+    "16": {
+      "id": 6,
+      "link": "https://tech-lab.sios.jp/archives/13976",
+      "text": "センサーデータを収集する（ibeacon -> Node.js -> Treasure ..."
+    }
+  },
+  {
+    "17": {
+      "id": 7,
+      "link": "https://www.webprofessional.jp/data-management-visualization-javascript/",
+      "text": "JavaScriptでデータ分析・ビジュアライズツールを作るときに ..."
+    }
+  },
+  {
+    "18": {
+      "id": 8,
+      "link": "https://techdocs.broadcom.com/jp/ja/ca-enterprise-software/it-operations-management/application-performance-management/10-7/implementing-agents/node-js-agent.html",
+      "text": "Node.js エージェント - TechDocs - Broadcom Inc."
+    }
+  },
+  {
+    "19": {
+      "id": 9,
+      "link": "https://www.software-developer-india.com/ja/node-jsが素晴らしい理由/",
+      "text": "Node.JSが素晴らしい理由 | Software Developer India"
+    }
+  },
+  {
+    "20": {
+      "id": 0,
+      "link": "https://note.com/kawa1228/n/nffd845b0ada5",
+      "text": "Node.jsでWEBデータを収集してCSV化する - note"
+    }
+  },
+  {
+    "21": {
+      "id": 1,
+      "link": "https://blog.honjala.net/entry/2018/08/17/005719",
+      "text": "node.jsでWebスクレイピングして取得データを保存する"
+    }
+  },
+  {
+    "22": {
+      "id": 2,
+      "link": "https://docs.datadoghq.com/ja/logs/log_collection/nodejs/",
+      "text": "NodeJS ログ収集 - Datadog Docs"
+    }
+  },
+  {
+    "23": {
+      "id": 3,
+      "link": "https://www.alibabacloud.com/help/ja/doc-detail/28991.htm",
+      "text": "Node.js ログ - データ収集| Alibaba Cloud ドキュメントセンター"
+    }
+  },
+  {
+    "24": {
+      "id": 4,
+      "link": "https://www.ibm.com/docs/ja/SSMKFH/com.ibm.apmaas.doc/install/nodejs_config_dc_adv.htm",
+      "text": "Node.js エージェントの診断データ・コレクターの構成 - IBM"
+    }
+  },
+  {
+    "25": {
+      "id": 5,
+      "link": "https://www.slideshare.net/mazdachihiro/nodejs-62280397",
+      "text": "Node.jsでデータ収集して デスクトップアプリを作ろう！"
+    }
+  },
+  {
+    "26": {
+      "id": 6,
+      "link": "https://paiza.jp/career/job_offers/8909",
+      "text": "【Node.js】Webサイトを解析して変化データを収集・分析 ..."
+    }
+  },
+  {
+    "27": {
+      "id": 7,
+      "link": "https://developer.mozilla.org/ja/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data",
+      "text": "サーバからのデータ取得 - ウェブ開発を学ぶ - MDN Web Docs"
+    }
+  },
+  {
+    "28": {
+      "id": 8,
+      "link": "https://qiita.com/raichi/items/d371bf3fe6ddec168725",
+      "text": "Node.jsをOpenTelemetryでメトリック収集してみる - Qiita"
+    }
+  },
+  {
+    "29": {
+      "id": 9,
+      "link": "https://docs.microsoft.com/ja-jp/azure/azure-monitor/app/nodejs",
+      "text": "Azure Application Insights を使用して Node.js サービスを監視 ..."
+    }
+  },
+  {
+    "30": {
+      "id": 0,
+      "link": "https://qiita.com/shumatsukishu/items/86c8415a3a052de9e117",
+      "text": "データ収集めんどくさいからプログラム書いちゃお - Qiita"
+    }
+  },
+  {
+    "31": {
+      "id": 1,
+      "link": "https://docs.newrelic.com/jp/docs/apm/agents/nodejs-agent/api-guides/guide-using-nodejs-agent-api/",
+      "text": "Node.jsのエージェントAPIを使用するためのガイド - New ..."
+    }
+  },
+  {
+    "32": {
+      "id": 2,
+      "link": "https://jobhub.jp/co_workers/skills/nodejs",
+      "text": "Node.jsへ依頼・外注・料金比較【ジョブハブ】"
+    }
+  },
+  {
+    "33": {
+      "id": 3,
+      "link": "https://crowdworks.jp/public/jobs/6094950",
+      "text": "【Webエンジニア募集】Node.jsを使ったWebスクレイピングによる ..."
+    }
+  },
+  {
+    "34": {
+      "id": 4,
+      "link": "https://docs.appdynamics.com/21.3/ja/analytics/configure-analytics/collect-transaction-analytics-data/configure-transaction-analytics-for-node-js-and-php-applications",
+      "text": "Node.js および PHP アプリケーション用のトランザクション分析の ..."
+    }
+  },
+  {
+    "35": {
+      "id": 5,
+      "link": "https://www.wenyanet.com/opensource/ja/611f3f7ad7cfff278335d76b.html",
+      "text": "nodejsによって作成された一連のWebページデータ収集フレーム ..."
+    }
+  },
+  {
+    "36": {
+      "id": 6,
+      "link": "https://tech-lab.sios.jp/archives/13976",
+      "text": "センサーデータを収集する（ibeacon -> Node.js -> Treasure ..."
+    }
+  },
+  {
+    "37": {
+      "id": 7,
+      "link": "https://www.webprofessional.jp/data-management-visualization-javascript/",
+      "text": "JavaScriptでデータ分析・ビジュアライズツールを作るときに ..."
+    }
+  },
+  {
+    "38": {
+      "id": 8,
+      "link": "https://techdocs.broadcom.com/jp/ja/ca-enterprise-software/it-operations-management/application-performance-management/10-7/implementing-agents/node-js-agent.html",
+      "text": "Node.js エージェント - TechDocs - Broadcom Inc."
+    }
+  },
+  {
+    "39": {
+      "id": 9,
+      "link": "https://www.software-developer-india.com/ja/node-jsが素晴らしい理由/",
+      "text": "Node.JSが素晴らしい理由 | Software Developer India"
+    }
+  },
+  {
+    "40": {
+      "id": 0,
+      "link": "https://note.com/kawa1228/n/nffd845b0ada5",
+      "text": "Node.jsでWEBデータを収集してCSV化する - note"
+    }
+  },
+  {
+    "41": {
+      "id": 1,
+      "link": "https://blog.honjala.net/entry/2018/08/17/005719",
+      "text": "node.jsでWebスクレイピングして取得データを保存する"
+    }
+  },
+  {
+    "42": {
+      "id": 2,
+      "link": "https://docs.datadoghq.com/ja/logs/log_collection/nodejs/",
+      "text": "NodeJS ログ収集 - Datadog Docs"
+    }
+  },
+  {
+    "43": {
+      "id": 3,
+      "link": "https://www.alibabacloud.com/help/ja/doc-detail/28991.htm",
+      "text": "Node.js ログ - データ収集| Alibaba Cloud ドキュメントセンター"
+    }
+  },
+  {
+    "44": {
+      "id": 4,
+      "link": "https://www.ibm.com/docs/ja/SSMKFH/com.ibm.apmaas.doc/install/nodejs_config_dc_adv.htm",
+      "text": "Node.js エージェントの診断データ・コレクターの構成 - IBM"
+    }
+  },
+  {
+    "45": {
+      "id": 5,
+      "link": "https://www.slideshare.net/mazdachihiro/nodejs-62280397",
+      "text": "Node.jsでデータ収集して デスクトップアプリを作ろう！"
+    }
+  },
+  {
+    "46": {
+      "id": 6,
+      "link": "https://paiza.jp/career/job_offers/8909",
+      "text": "【Node.js】Webサイトを解析して変化データを収集・分析 ..."
+    }
+  },
+  {
+    "47": {
+      "id": 7,
+      "link": "https://developer.mozilla.org/ja/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data",
+      "text": "サーバからのデータ取得 - ウェブ開発を学ぶ - MDN Web Docs"
+    }
+  },
+  {
+    "48": {
+      "id": 8,
+      "link": "https://qiita.com/raichi/items/d371bf3fe6ddec168725",
+      "text": "Node.jsをOpenTelemetryでメトリック収集してみる - Qiita"
+    }
+  },
+  {
+    "49": {
+      "id": 9,
+      "link": "https://docs.microsoft.com/ja-jp/azure/azure-monitor/app/nodejs",
+      "text": "Azure Application Insights を使用して Node.js サービスを監視 ..."
+    }
+  },
+  {
+    "50": {
+      "id": 0,
+      "link": "https://qiita.com/shumatsukishu/items/86c8415a3a052de9e117",
+      "text": "データ収集めんどくさいからプログラム書いちゃお - Qiita"
+    }
+  },
+  {
+    "51": {
+      "id": 1,
+      "link": "https://docs.newrelic.com/jp/docs/apm/agents/nodejs-agent/api-guides/guide-using-nodejs-agent-api/",
+      "text": "Node.jsのエージェントAPIを使用するためのガイド - New ..."
+    }
+  },
+  {
+    "52": {
+      "id": 2,
+      "link": "https://jobhub.jp/co_workers/skills/nodejs",
+      "text": "Node.jsへ依頼・外注・料金比較【ジョブハブ】"
+    }
+  },
+  {
+    "53": {
+      "id": 3,
+      "link": "https://crowdworks.jp/public/jobs/6094950",
+      "text": "【Webエンジニア募集】Node.jsを使ったWebスクレイピングによる ..."
+    }
+  },
+  {
+    "54": {
+      "id": 4,
+      "link": "https://docs.appdynamics.com/21.3/ja/analytics/configure-analytics/collect-transaction-analytics-data/configure-transaction-analytics-for-node-js-and-php-applications",
+      "text": "Node.js および PHP アプリケーション用のトランザクション分析の ..."
+    }
+  },
+  {
+    "55": {
+      "id": 5,
+      "link": "https://www.wenyanet.com/opensource/ja/611f3f7ad7cfff278335d76b.html",
+      "text": "nodejsによって作成された一連のWebページデータ収集フレーム ..."
+    }
+  },
+  {
+    "56": {
+      "id": 6,
+      "link": "https://tech-lab.sios.jp/archives/13976",
+      "text": "センサーデータを収集する（ibeacon -> Node.js -> Treasure ..."
+    }
+  },
+  {
+    "57": {
+      "id": 7,
+      "link": "https://www.webprofessional.jp/data-management-visualization-javascript/",
+      "text": "JavaScriptでデータ分析・ビジュアライズツールを作るときに ..."
+    }
+  },
+  {
+    "58": {
+      "id": 8,
+      "link": "https://techdocs.broadcom.com/jp/ja/ca-enterprise-software/it-operations-management/application-performance-management/10-7/implementing-agents/node-js-agent.html",
+      "text": "Node.js エージェント - TechDocs - Broadcom Inc."
+    }
+  },
+  {
+    "59": {
+      "id": 9,
+      "link": "https://www.software-developer-india.com/ja/node-jsが素晴らしい理由/",
+      "text": "Node.JSが素晴らしい理由 | Software Developer India"
+    }
+  },
+  {
+    "60": {
+      "id": 0,
+      "link": "https://note.com/kawa1228/n/nffd845b0ada5",
+      "text": "Node.jsでWEBデータを収集してCSV化する - note"
+    }
+  },
+  {
+    "61": {
+      "id": 1,
+      "link": "https://blog.honjala.net/entry/2018/08/17/005719",
+      "text": "node.jsでWebスクレイピングして取得データを保存する"
+    }
+  },
+  {
+    "62": {
+      "id": 2,
+      "link": "https://docs.datadoghq.com/ja/logs/log_collection/nodejs/",
+      "text": "NodeJS ログ収集 - Datadog Docs"
+    }
+  },
+  {
+    "63": {
+      "id": 3,
+      "link": "https://www.alibabacloud.com/help/ja/doc-detail/28991.htm",
+      "text": "Node.js ログ - データ収集| Alibaba Cloud ドキュメントセンター"
+    }
+  },
+  {
+    "64": {
+      "id": 4,
+      "link": "https://www.ibm.com/docs/ja/SSMKFH/com.ibm.apmaas.doc/install/nodejs_config_dc_adv.htm",
+      "text": "Node.js エージェントの診断データ・コレクターの構成 - IBM"
+    }
+  },
+  {
+    "65": {
+      "id": 5,
+      "link": "https://www.slideshare.net/mazdachihiro/nodejs-62280397",
+      "text": "Node.jsでデータ収集して デスクトップアプリを作ろう！"
+    }
+  },
+  {
+    "66": {
+      "id": 6,
+      "link": "https://paiza.jp/career/job_offers/8909",
+      "text": "【Node.js】Webサイトを解析して変化データを収集・分析 ..."
+    }
+  },
+  {
+    "67": {
+      "id": 7,
+      "link": "https://developer.mozilla.org/ja/docs/Learn/JavaScript/Client-side_web_APIs/Fetching_data",
+      "text": "サーバからのデータ取得 - ウェブ開発を学ぶ - MDN Web Docs"
+    }
+  },
+  {
+    "68": {
+      "id": 8,
+      "link": "https://qiita.com/raichi/items/d371bf3fe6ddec168725",
+      "text": "Node.jsをOpenTelemetryでメトリック収集してみる - Qiita"
+    }
+  },
+  {
+    "69": {
+      "id": 9,
+      "link": "https://docs.microsoft.com/ja-jp/azure/azure-monitor/app/nodejs",
+      "text": "Azure Application Insights を使用して Node.js サービスを監視 ..."
+    }
+  },
+  {
+    "70": {
+      "id": 0,
+      "link": "https://qiita.com/shumatsukishu/items/86c8415a3a052de9e117",
+      "text": "データ収集めんどくさいからプログラム書いちゃお - Qiita"
+    }
+  },
+  {
+    "71": {
+      "id": 1,
+      "link": "https://docs.newrelic.com/jp/docs/apm/agents/nodejs-agent/api-guides/guide-using-nodejs-agent-api/",
+      "text": "Node.jsのエージェントAPIを使用するためのガイド - New ..."
+    }
+  },
+  {
+    "72": {
+      "id": 2,
+      "link": "https://jobhub.jp/co_workers/skills/nodejs",
+      "text": "Node.jsへ依頼・外注・料金比較【ジョブハブ】"
+    }
+  },
+  {
+    "73": {
+      "id": 3,
+      "link": "https://crowdworks.jp/public/jobs/6094950",
+      "text": "【Webエンジニア募集】Node.jsを使ったWebスクレイピングによる ..."
+    }
+  },
+  {
+    "74": {
+      "id": 4,
+      "link": "https://docs.appdynamics.com/21.3/ja/analytics/configure-analytics/collect-transaction-analytics-data/configure-transaction-analytics-for-node-js-and-php-applications",
+      "text": "Node.js および PHP アプリケーション用のトランザクション分析の ..."
+    }
+  },
+  {
+    "75": {
+      "id": 5,
+      "link": "https://www.wenyanet.com/opensource/ja/611f3f7ad7cfff278335d76b.html",
+      "text": "nodejsによって作成された一連のWebページデータ収集フレーム ..."
+    }
+  },
+  {
+    "76": {
+      "id": 6,
+      "link": "https://tech-lab.sios.jp/archives/13976",
+      "text": "センサーデータを収集する（ibeacon -> Node.js -> Treasure ..."
+    }
+  },
+  {
+    "77": {
+      "id": 7,
+      "link": "https://www.webprofessional.jp/data-management-visualization-javascript/",
+      "text": "JavaScriptでデータ分析・ビジュアライズツールを作るときに ..."
+    }
+  },
+  {
+    "78": {
+      "id": 8,
+      "link": "https://techdocs.broadcom.com/jp/ja/ca-enterprise-software/it-operations-management/application-performance-management/10-7/implementing-agents/node-js-agent.html",
+      "text": "Node.js エージェント - TechDocs - Broadcom Inc."
+    }
+  },
+  {
+    "79": {
+      "id": 9,
+      "link": "https://www.software-developer-india.com/ja/node-jsが素晴らしい理由/",
+      "text": "Node.JSが素晴らしい理由 | Software Developer India"
+    }
+  }
+]

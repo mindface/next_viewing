@@ -8,6 +8,7 @@ import {
   getFetchStructuralPats,
   deleteFetchStructuralPat,
 } from '../../store/structuralPattern/slice'
+import { setWidth } from '../../utils/set-style'
 
 function BordStructure() {
   const store = useStore()
@@ -24,13 +25,6 @@ function BordStructure() {
   const structureRef = useRef(null)
 
   const modalRef = useRef({} as Handler)
-
-  const setWidth = (elementStr:string) => {
-    const targetString = "\"structure\""
-    const number = (elementStr.match(new RegExp(targetString, "g")) || [] ).length
-    // setStructureBlock(number !== 0 ? 320*number + 'px' : 'auto')
-    return number !== 0 ? 240*number + 'px' : 'auto'
-  }
 
   useEffect(() => {
     dispatch(getFetchStructuralPats())
@@ -86,10 +80,12 @@ function BordStructure() {
             <div className="structures-outer">
               <div
                 className='structures structures--event-none _flex_'
-                style={{width:setWidth(structurals.current)}}
                 ref={structureRef}
-                dangerouslySetInnerHTML={{ __html: structurals.current }}
-              ></div>
+                style={{width:setWidth(structurals.current)}}
+                dangerouslySetInnerHTML={{ __html: structurals.current
+                }}
+              >
+              </div>
             </div>
           </div>
         </CommonModal>
